@@ -12,7 +12,9 @@ class IconlyExample extends StatefulWidget {
 class _IconlyExampleState extends State<IconlyExample> {
   @override
   Widget build(BuildContext context) {
-  
+  //note: since Flutter does not support multicolor Icons, we can not support Bulk Icon set. but we are going to implement that in the future.
+  //! according the main documentations
+
     return Scaffold(
       body:Center(
         child:  IconButton(
