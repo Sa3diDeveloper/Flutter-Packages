@@ -15,6 +15,8 @@ final List<String> imgList = [
 final themeMode = ValueNotifier(2);
 
 class CarouselDemo extends StatelessWidget {
+  const CarouselDemo({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
@@ -45,7 +47,7 @@ class CarouselDemo extends StatelessWidget {
 class DemoItem extends StatelessWidget {
   final String title;
   final String route;
-  DemoItem(this.title, this.route);
+  DemoItem(this.title, this.route, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -59,6 +61,8 @@ class DemoItem extends StatelessWidget {
 }
 
 class CarouselDemoHome extends StatelessWidget {
+  const CarouselDemoHome({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -97,6 +101,8 @@ class CarouselDemoHome extends StatelessWidget {
 }
 
 class BasicDemo extends StatelessWidget {
+  const BasicDemo({super.key});
+
   @override
   Widget build(BuildContext context) {
     List<int> list = [1, 2, 3, 4, 5];
@@ -117,6 +123,8 @@ class BasicDemo extends StatelessWidget {
 }
 
 class NoCenterDemo extends StatelessWidget {
+  const NoCenterDemo({super.key});
+
   @override
   Widget build(BuildContext context) {
     List<int> list = [1, 2, 3, 4, 5];
@@ -139,6 +147,8 @@ class NoCenterDemo extends StatelessWidget {
 }
 
 class ImageSliderDemo extends StatelessWidget {
+  const ImageSliderDemo({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -157,47 +167,47 @@ class ImageSliderDemo extends StatelessWidget {
 
 final List<Widget> imageSliders = imgList
     .map((item) => Container(
-          child: Container(
-            margin: const EdgeInsets.all(5.0),
-            child: ClipRRect(
-                borderRadius: const BorderRadius.all(Radius.circular(5.0)),
-                child: Stack(
-                  children: <Widget>[
-                    Image.network(item, fit: BoxFit.cover, width: 1000.0),
-                    Positioned(
-                      bottom: 0.0,
-                      left: 0.0,
-                      right: 0.0,
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              Color.fromARGB(200, 0, 0, 0),
-                              Color.fromARGB(0, 0, 0, 0)
-                            ],
-                            begin: Alignment.bottomCenter,
-                            end: Alignment.topCenter,
-                          ),
-                        ),
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 10.0, horizontal: 20.0),
-                        child: Text(
-                          'No. ${imgList.indexOf(item)} image',
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 20.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
+      margin: const EdgeInsets.all(5.0),
+      child: ClipRRect(
+          borderRadius: const BorderRadius.all(Radius.circular(5.0)),
+          child: Stack(
+            children: <Widget>[
+              Image.network(item, fit: BoxFit.cover, width: 1000.0),
+              Positioned(
+                bottom: 0.0,
+                left: 0.0,
+                right: 0.0,
+                child: Container(
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        Color.fromARGB(200, 0, 0, 0),
+                        Color.fromARGB(0, 0, 0, 0)
+                      ],
+                      begin: Alignment.bottomCenter,
+                      end: Alignment.topCenter,
                     ),
-                  ],
-                )),
-          ),
-        ))
+                  ),
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 10.0, horizontal: 20.0),
+                  child: Text(
+                    'No. ${imgList.indexOf(item)} image',
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          )),
+    ))
     .toList();
 
 class ComplicatedImageDemo extends StatelessWidget {
+  const ComplicatedImageDemo({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -217,6 +227,8 @@ class ComplicatedImageDemo extends StatelessWidget {
 }
 
 class EnlargeStrategyDemo extends StatelessWidget {
+  const EnlargeStrategyDemo({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -237,6 +249,8 @@ class EnlargeStrategyDemo extends StatelessWidget {
 }
 
 class ManuallyControlledSlider extends StatefulWidget {
+  const ManuallyControlledSlider({super.key});
+
   @override
   State<StatefulWidget> createState() {
     return _ManuallyControlledSliderState();
@@ -300,6 +314,8 @@ class _ManuallyControlledSliderState extends State<ManuallyControlledSlider> {
 
 
 class EnlargeStrategyZoomDemo extends StatelessWidget {
+  const EnlargeStrategyZoomDemo({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
