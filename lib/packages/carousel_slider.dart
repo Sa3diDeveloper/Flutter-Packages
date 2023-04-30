@@ -27,15 +27,15 @@ class CarouselDemo extends StatelessWidget {
           themeMode: ThemeMode.values.toList()[value as int],
           debugShowCheckedModeBanner: false,
           routes: {
-            '/': (ctx) => CarouselDemoHome(),
-            '/basic': (ctx) => BasicDemo(),
-            '/nocenter': (ctx) => NoCenterDemo(),
-            '/image': (ctx) => ImageSliderDemo(),
-            '/complicated': (ctx) => ComplicatedImageDemo(),
-            '/enlarge': (ctx) => EnlargeStrategyDemo(),
-            '/manual': (ctx) => ManuallyControlledSlider(),
+            '/': (ctx) => const CarouselDemoHome(),
+            '/basic': (ctx) => const BasicDemo(),
+            '/nocenter': (ctx) => const NoCenterDemo(),
+            '/image': (ctx) => const ImageSliderDemo(),
+            '/complicated': (ctx) => const ComplicatedImageDemo(),
+            '/enlarge': (ctx) => const EnlargeStrategyDemo(),
+            '/manual': (ctx) => const ManuallyControlledSlider(),
           
-            '/zoom': (ctx) => EnlargeStrategyZoomDemo(),
+            '/zoom': (ctx) => const EnlargeStrategyZoomDemo(),
           },
         );
       },
@@ -47,7 +47,7 @@ class CarouselDemo extends StatelessWidget {
 class DemoItem extends StatelessWidget {
   final String title;
   final String route;
-  DemoItem(this.title, this.route, {super.key});
+  const DemoItem(this.title, this.route, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -78,22 +78,22 @@ class CarouselDemoHome extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
-          DemoItem('Basic demo', '/basic'),
-          DemoItem('No center mode demo', '/nocenter'),
-          DemoItem('Image carousel slider', '/image'),
-          DemoItem('More complicated image slider', '/complicated'),
-          DemoItem('Enlarge strategy demo slider', '/enlarge'),
-          DemoItem('Manually controlled slider', '/manual'),
-          DemoItem('Noon-looping carousel slider', '/noloop'),
-          DemoItem('Vertical carousel slider', '/vertical'),
-          DemoItem('Fullscreen carousel slider', '/fullscreen'),
-          DemoItem('Carousel with indicator controller demo', '/indicator'),
-          DemoItem('On-demand carousel slider', '/ondemand'),
-          DemoItem('Image carousel slider with prefetch demo', '/prefetch'),
-          DemoItem('Carousel change reason demo', '/reason'),
-          DemoItem('Keep pageview position demo', '/position'),
-          DemoItem('Multiple item in one screen demo', '/multiple'),
-          DemoItem('Enlarge strategy: zoom demo', '/zoom'),
+          const DemoItem('Basic demo', '/basic'),
+          const DemoItem('No center mode demo', '/nocenter'),
+          const DemoItem('Image carousel slider', '/image'),
+          const DemoItem('More complicated image slider', '/complicated'),
+          const DemoItem('Enlarge strategy demo slider', '/enlarge'),
+          const DemoItem('Manually controlled slider', '/manual'),
+          const DemoItem('Noon-looping carousel slider', '/noloop'),
+          const DemoItem('Vertical carousel slider', '/vertical'),
+          const DemoItem('Fullscreen carousel slider', '/fullscreen'),
+          const DemoItem('Carousel with indicator controller demo', '/indicator'),
+          const DemoItem('On-demand carousel slider', '/ondemand'),
+          const DemoItem('Image carousel slider with prefetch demo', '/prefetch'),
+          const DemoItem('Carousel change reason demo', '/reason'),
+          const DemoItem('Keep pageview position demo', '/position'),
+          const DemoItem('Multiple item in one screen demo', '/multiple'),
+          const DemoItem('Enlarge strategy: zoom demo', '/zoom'),
         ],
       ),
     );
