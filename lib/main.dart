@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterpackages/packages/animated_txt_kit.dart';
-import 'package:flutterpackages/packages/carousel_slider.dart';
 import 'package:flutterpackages/packages/flutter_toast.dart';
-import 'package:flutterpackages/packages/shared_prefs_store_list_val.dart';
 import 'package:flutterpackages/packages/provider/counter_provider.dart';
 import 'package:provider/provider.dart';
 
